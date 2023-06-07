@@ -16,7 +16,11 @@ tracing = "0.1"
 tracing-subscriber = { version = "0.3.11", features = ["env-filter"] }
 workspaces = "0.6.0"
 pkg-config = "0.3.1"
+near-sdk = "4.1.1"
 
 [[example]]
 name = "integration-tests"
 path = "src/tests.rs"
+
+[dependencies]
+near-sdk = "4.1.1"

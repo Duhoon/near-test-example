@@ -18,11 +18,17 @@ impl Default for Contract{
 
 #[near_bindgen]
 impl Contract {
-    fn get_balance(&self) -> U128{
+    pub fn get_balance(&self) -> U128{
         return self.balance.into()
     }
 
-    fn set_balance(&mut self, _balance: U128) -> U128{
+    pub fn set_balance(&mut self, _balance: U128) -> U128{
+        self.balance = _balance.0;
+
+        self.balance.into()
+    }
+
+    pub fn extern_set_balance(&mut self, _balance: U128) -> U128{
         self.balance = _balance.0;
 
         self.balance.into()

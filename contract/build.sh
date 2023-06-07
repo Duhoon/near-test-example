@@ -3,4 +3,4 @@
 echo ">> Building contract"
 
 rustup target add wasm32-unknown-unknown
-cargo build --all --target wasm32-unknown-unknown --release & cp ./target/wasm32-unknown-unknown/release/*.wasm ./dist/
+cargo build --all --target wasm32-unknown-unknown --release & cp -f ./target/wasm32-unknown-unknown/release/*.wasm ./dist
